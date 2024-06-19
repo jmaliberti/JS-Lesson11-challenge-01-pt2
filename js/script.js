@@ -52,7 +52,11 @@ const showPets = function (petArray) {
             let status = `sleeping`;
         };
         let li = document.createElement("li");
-        li.innerHTML = `<span class="pet-name>${pet.name}</span> the ${pet.species} is ${status}.`;
-        li.append(pets);
+        li.innerHTML = `<span class="pet-name">${pet.name}</span> the ${pet.species} is ${status}.`;
+        pets.append(li);
     }
 };
+
+statusButton.addEventListener("click", function () {
+    showPets(allPets);
+}); 
